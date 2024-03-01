@@ -1,9 +1,15 @@
 # Praktikum Web
-Laporan Praktikum Web semester 4 2024
 
-Nama : Cesario Hafidh Arifa N. <br>
-NIM  : L200224217 <br>
-Kelas: X 
+- Nama	: Cesario Hafidh Arifa Noorcholish
+- NIM	: L200224217
+- Kelas : X
 
-## Daftar Modul
-1. [Modul 1]
+[Jangan Di Klik](https://www.youtube.com/watch?v=q-Y0bnx6Ndw)
+
+## Daftar Modul :
+*File laporan terdapat pada Folder `Laporan` atau [Klik disini](/Laporan)*
+
+- Modul 1 HTML (HyperText Markup Language) DASAR <br>
+Ini merupakan Folder [Modul 1](/Modul_1) <br>
+Status: `Belum Dikumpulkan`
+
