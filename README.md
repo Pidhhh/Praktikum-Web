@@ -8,8 +8,9 @@
 
 ## Daftar Modul :
 *File laporan terdapat pada Folder `Laporan` atau [Klik disini](/Laporan)*
+*Zip Folder terdapat pada Folder `Zip` atau [Klik disini](/Zip)*
 
 - Modul 1 HTML (HyperText Markup Language) DASAR <br>
 Ini merupakan Folder [Modul 1](/Modul_1) <br>
-Status: `Belum Dikumpulkan`
+Status: `Sudah Dikumpulkan`
 
