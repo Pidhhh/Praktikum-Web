@@ -7,7 +7,7 @@
 [Jangan Di Klik](https://www.youtube.com/watch?v=q-Y0bnx6Ndw)
 
 ## Daftar Modul :
-*File laporan terdapat pada Folder `Laporan` atau [Klik disini](/Laporan)*
+*File laporan terdapat pada Folder `Laporan` atau [Klik disini](/Laporan)* <br>
 *Zip Folder terdapat pada Folder `Zip` atau [Klik disini](/Zip)*
 
 - Modul 1 HTML (HyperText Markup Language) DASAR <br>
