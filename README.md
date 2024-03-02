@@ -1,7 +1,7 @@
 # Praktikum Web
 
-- Nama	: Cesario Hafidh Arifa Noorcholish
-- NIM	: L200224217
+- Nama  : Cesario Hafidh Arifa Noorcholish
+- NIM   : L200224217
 - Kelas : X
 
 [Jangan Di Klik](https://www.youtube.com/watch?v=q-Y0bnx6Ndw)
