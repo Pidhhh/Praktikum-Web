@@ -14,3 +14,7 @@
 Ini merupakan Folder [Modul 1](/Modul_1) <br>
 Status: `Sudah Dikumpulkan`
 
+- Modul 2 HTML advance <br>
+Ini merupakan Folder [Modul 2](/Modul_2) <br>
+Status: `Sudah Dikumpulkan`
+
