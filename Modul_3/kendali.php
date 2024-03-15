@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>variabel</title>
+    <title>Kendali</title>
 </head>
 <body>
 <H1>Nilai</H1>
@@ -13,26 +13,26 @@
 </form>
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-$nilai = $_POST['nilai'];
-$submit = $_POST['submit'];
+$nilai = isset($_POST['nilai']) ? $_POST['nilai'] : '';
+$submit = isset($_POST['submit']) ? $_POST['submit'] : '';
 if($submit){
     if($nilai == ''){
-        $huruf = "Nilai kosong/belum diisi";
+        $Grade = "Nilai kosong/belum diisi";
     }elseif($nilai <= 20){
-        $huruf = "E";
+        $Grade = "E";
     }elseif($nilai <= 40){
-        $huruf = "D";
+        $Grade = "D";
     }elseif($nilai <= 60){
-        $huruf = "C";
+        $Grade = "C";
     }elseif($nilai <= 80){
-        $huruf = "B";
+        $Grade = "B";
     }elseif($nilai <= 100){
-        $huruf = "A";
+        $Grade = "A";
     }else{
-        $huruf = "Nilai yang dimasukkan salah!";
+        $Grade = "Nilai yang dimasukkan salah!";
     }
     echo "Nilai angka adalah $nilai<br>";
-    echo "Maka nilai huruf adalah $huruf";
+    echo "Maka nilai Grade adalah $Grade";
 }
 ?>
 </body>

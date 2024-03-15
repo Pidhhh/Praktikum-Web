@@ -1,28 +1,25 @@
 <html>
 <head>
-    <title>variable</title>
+    <title>Variabel</title>
 </head>
 <body>
 <H1>Buku Tamu</H1>
 <form method='POST' action='variable.php'>
-    <p>Nama : <input type="text">
-    name = 'nama' size = '20'></p>
-    <p>Email : <input type="text">
-    name = 'email' size = '30'></p>
-    <p>Komentar : <textarea name='komentar' cols='30'
-    rows='3'></textarea></p>
-    <p><input type='submit' name='submit' value='Kirim'></p>
+    Nama : <input type="text" name="nama" size="20"><br>
+    Email : <input type="text" name="email" size="30"><br>
+    Komentar : <textarea name="komentar"></textarea><br>
+    <input type="submit" name="submit" value="Submit">
 </form>
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-$nama = $_POST['nama'];
-$email = $_POST['email'];
-$komentar = $_POST['komentar'];
-$submit = $_POST['submit'];
+$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$komentar = isset($_POST['komentar']) ? $_POST['komentar'] : '';
+$submit = isset($_POST['submit']) ? $_POST['submit'] : '';
 if($submit){
-    echo "</br>Nama : $nama";
-    echo "</br>Email : $email";
-    echo "</br>Komentar : $komentar";
+    echo "<br>Nama : $nama";
+    echo "<br>Email : $email";
+    echo "<br>Komentar : $komentar";
 }
 ?>
 </body>

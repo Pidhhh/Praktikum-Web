@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>variable</title>
+    <title>Fungsi Tanggal dan Waktu</title>
 </head>
 <body>
 <H1>Buku Tamu</H1>
@@ -16,10 +16,10 @@
 error_reporting(E_ALL ^ E_NOTICE);
 
 // Fixing variable names: $ _POST to $_POST
-$nama = $_POST['nama'];
-$email = $_POST['email'];
-$komentar = $_POST['komentar'];
-$submit = $_POST['submit'];
+$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$komentar = isset($_POST['komentar']) ? $_POST['komentar'] : '';
+$submit = isset($_POST['submit']) ? $_POST['submit'] : '';
 
 // Checking if form is submitted
 if($submit){
