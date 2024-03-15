@@ -1,5 +1,0 @@
-::1 - - [15/Mar/2024:10:08:08 +0700] "GET /L200224217/variable.php HTTP/1.1" 200 1043 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-::1 - - [15/Mar/2024:10:08:18 +0700] "GET /L200224217/Modul_2/variable.php HTTP/1.1" 200 1075 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-::1 - - [15/Mar/2024:10:08:41 +0700] "GET /L200224217/Modul_2/tanggal.php HTTP/1.1" 200 1265 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-::1 - - [15/Mar/2024:10:09:56 +0700] "GET /L200224217/Modul_2/tugas1.php HTTP/1.1" 200 342 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-::1 - - [15/Mar/2024:10:10:02 +0700] "POST /L200224217/Modul_2/tugas1.php HTTP/1.1" 200 447 "http://localhost/L200224217/Modul_2/tugas1.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
