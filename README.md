@@ -18,3 +18,7 @@ Status: `Sudah Dikumpulkan`
 Ini merupakan Folder [Modul 2](/Modul_2) <br>
 Status: `Sudah Dikumpulkan`
 
+- Modul 3 PHP (Hypertext Preprocessor) <br>
+Ini merupakan Folder [Modul 3](/Modul_3) <br>
+Status: `Sudah Dikumpulkan`
+
