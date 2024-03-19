@@ -1,0 +1,88 @@
+<!-- Cesario Hafidh Arifa Noorcholish - L200224217 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* This is the closest font that similar with the picture */
+            background-color: #fff5e7; /* Background color of the page */
+            transform: scale(1.5); /* Scale the page 1.5x larger because if only 1x the page will to small*/
+            transform-origin: top; /* Set the origin of scaling to the top */
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: transparent; /* Background color of the container */
+            text-align: center;
+        }
+        .moody {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; /* I tried to search the font but i cannot find it */
+        }
+        .button-box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        input[type="text"], input[type="password"], input[type="signIN"] {
+            width: 270px;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            margin-left: 0;
+            text-align: center;
+        }
+        input[type="SignIN"] {
+            background-color: #ffdd01;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 270px;
+            border: 3px solid black;
+            border-radius: 4px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+        }
+        .space1 {
+            margin-bottom: 30px;
+        }
+        .space2 {
+            margin-bottom: 7px;
+        }
+        .space3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="moody" style="font-size: 40px;"> Moody </div>
+        <div class="space1"></div>
+        <a href="#" style="text-decoration: none; display: flex; align-items: center; background-color: white; padding: 6px 49px; border-radius: 4px; box-shadow: 5px 5px 8px rgb(122, 120, 120);">
+            <div style="display: flex; align-items: center;">
+                <img src="Google128px.png" alt="Google Logo" style="height: 40px; margin-right: 2px;">
+            </div>
+            <div style="font-family: Arial, sans-serif; font-size: 16px; color: black; font-weight: bold;">Sign in with Google</div>
+        </a>
+        <div class="space1"></div>
+        <div class="box">
+            <input type="text" placeholder="Email" required style="border: 3px solid black; border-radius: 4px; font-size: 14px;">
+        </div>
+        <div class="space2"></div>
+        <div class="box">
+            <input type="password" placeholder="Password" required style="border: 3px solid black; border-radius: 4px; font-size: 14px;">
+        </div>
+        <div class="space2"></div>
+        <input type="SignIN" value="Sign in">
+        <div class="space3"></div>
+        <a href="#" style=" text-decoration: none; align-items: center; background-color: transparent; padding: 6px 89px; border-radius: 4px; font-size: 16px; font-weight: bold; color: black; border: 3px solid black; ">
+            Create Account
+        </a>
+        
+    </div>
+</body>
+</html>
