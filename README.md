@@ -22,3 +22,11 @@ Status: `Sudah Dikumpulkan`
 Ini merupakan Folder [Modul 3](/Modul_3) <br>
 Status: `Sudah Dikumpulkan`
 
+- Modul 4 SQL (Structured Query Language) <br>
+Ini merupakan Folder [Modul 4](/Modul_4) <br>
+Status: `Sudah Dikumpulkan`
+
+- Module 5 PHP-Based Web Application and MySQL Database (I) <br>
+Ini merupakan Folder [Modul 5](/Modul_5) <br>
+Status: `Sudah Dikumpulkan`
+
