@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+:root{
+  /* ### Primary-color */
+
+--Yellow: hsl(47, 88%, 63%);
+
+/* ### Neutral-color */
+
+--White: hsl(0, 0%, 100%);
+--Grey: hsl(0, 0%, 50%);
+--Black: hsl(0, 0%, 7%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+}
+
+body{
+  background-color: var(--Yellow);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.Main{
+  max-width: 280px;
+  min-width: 280px;
+  background-color: var(--White);
+  padding: 18px;
+  border: 1px solid var(--Black);
+  border-radius: 20px;
+  box-shadow: 15px 15px 0;
+  margin-bottom: 20px;
+}
+
+/* This code is for changing the scale */
+@media screen and (min-width: 375px) {
+  .Main {
+    transform: scale(1.7);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .Main {
+    transform: scale(1.4); 
+  }
+}
+
+
+.Upper_Image img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.Text_Under button{
+  background-color: var(--Yellow);
+  border: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.Text_Under .date{
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--Grey);
+}
+
+.Text_Under h1{
+  font-size: 18px;
+  color: var(--Black);
+  cursor: pointer;
+  transition: color .6s;
+}
+
+.Text_Under h1:hover{
+  color: var(--Yellow);
+}
+
+.Text_Under .details{
+  color: var(--Grey);
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: 18px;
+}
+
+.profiles{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.profiles img{
+  width: 30;
+  height: 30px;
+  margin-right: 12px;
+}
+
+.profiles p{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--Black);
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
