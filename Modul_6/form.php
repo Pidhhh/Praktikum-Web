@@ -21,6 +21,10 @@ $conn = mysqli_connect('localhost', 'root', '', 'factory');
                 <td width='65%'><input type='text' name='Nama_Barang' size='10'></td>
             </tr>
             <tr>
+                <td width='25%'>Kode Gudang</td>
+                <td width='5%'>:</td>
+                <td width='65%'><input type='text' name='Kode_Gudang' size='10'></td>
+            <tr>
                 <td width='25%'>Gudang</td>
                 <td width='5%'>:</td>
                 <td width='65%'>

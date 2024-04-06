@@ -30,3 +30,6 @@ Status: `Sudah Dikumpulkan`
 Ini merupakan Folder [Modul 5](/Modul_5) <br>
 Status: `Sudah Dikumpulkan`
 
+- Module 6 PHP-Based Web Application and MySQL Database (II) <br>
+Ini merupakan Folder [Modul 6](/Modul_6) <br>
+Status: `Sudah Dikumpulkan`
