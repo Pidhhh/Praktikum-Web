@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2><marquee>Free Registration</marquee></h2>
+    <form action="process.php" method="post" name="form">
+        <table width="68%" border="0" align="center" cellpadding="0">
+            <tr>
+                <td class="td" width="15%">Nama</td>
+                <td width="2%">:</td>
+                <td width="83%"><input name="txtName" type="text" id="txtName"></td>
+            </tr>
+            <tr>
+                <td class="td">Birth Date</td>
+                <td>:</td>
+                <td>
+                    <input name="txtDate" type="text" id="txtDate" size="4" maxlength="2"> /
+                    <input name="txtMonth" type="text" id="txtMonth" size="4" maxlength="2"> /
+                    <input name="txtYear" type="text" id="txtYear" size="8" maxlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td class="td">Alamat</td>
+                <td>:</td>
+                <td><textarea name="txtAddress" cols="40" rows="2" id="txtAddress"></textarea></td>
+            </tr>
+            <tr>
+                <td class="td">City</td>
+                <td>:</td>
+                <td><input name="txtCity" type="text" id="txtCity"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                    <input name="btnSend" type="submit" id="btnSend" value="Send">
+                    <input name="btnCancel" type="reset" id="btnCancel" value="Cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
