@@ -1,0 +1,18 @@
+body {
+    font-variant: small-caps;
+    background: blue;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: red;
+    text-align: center;
+}
+
+table {
+    background: grey;
+}
+
+.td {
+    font-weight: bold;
+}
