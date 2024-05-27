@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Pengambilan Keputusan</title>
+    <script>
+        function hitungNilai() {
+            // Mendapatkan nilai input
+            var nilai = parseInt(document.getElementById("nilaiInput").value);
+
+            // Menentukan nilai berdasarkan input
+            var nilaiHuruf;
+            if (nilai >= 0 && nilai <= 20) {
+                nilaiHuruf = "E";
+            } else if (nilai >= 21 && nilai <= 40) {
+                nilaiHuruf = "D";
+            } else if (nilai >= 41 && nilai <= 60) {
+                nilaiHuruf = "C";
+            } else if (nilai >= 61 && nilai <= 80) {
+                nilaiHuruf = "B";
+            } else if (nilai >= 81 && nilai <= 100) {
+                nilaiHuruf = "A";
+            } else {
+                nilaiHuruf = "Nilai Tidak Valid";
+            }
+
+            // Menampilkan hasil
+            document.getElementById("hasil").innerText = "Nilai: " + nilaiHuruf;
+        }
+    </script>
+</head>
+<body>
+    <h2>Aplikasi Pengambilan Keputusan</h2>
+    <label for="nilaiInput">Masukkan Nilai (0-100):</label>
+    <input type="text" id="nilaiInput" name="nilaiInput">
+    <button onclick="hitungNilai()">Hitung</button>
+    <div id="hasil"></div>
+</body>
+</html>

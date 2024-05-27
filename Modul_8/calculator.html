@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script>
+    function add() {
+        let valuea = parseFloat(document.myform.a.value);
+        let valueb = parseFloat(document.myform.b.value);
+        let result = valuea + valueb;
+        document.myform.result.value = result;
+    }
+
+    function subtract() {
+        let valuea = parseFloat(document.myform.a.value);
+        let valueb = parseFloat(document.myform.b.value);
+        let result = valuea - valueb;
+        document.myform.result.value = result;
+    }
+
+    function multiply() {
+        let valuea = parseFloat(document.myform.a.value);
+        let valueb = parseFloat(document.myform.b.value);
+        let result = valuea * valueb;
+        document.myform.result.value = result;
+    }
+
+    function divide() {
+        let valuea = parseFloat(document.myform.a.value);
+        let valueb = parseFloat(document.myform.b.value);
+        if (valueb !== 0) {
+            let result = valuea / valueb;
+            document.myform.result.value = result;
+        } else {
+            alert("Cannot divide by zero");
+            document.myform.result.value = "";
+        }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <h3>Simple Calculator</h3><br>
+    Value A: <input type="text" name="a" size="5"><br>
+    Value B: <input type="text" name="b" size="5"><br><br>
+    <input type="button" name="action" value="+" onclick="add()">
+    <input type="button" name="action" value="-" onclick="subtract()">
+    <input type="button" name="action" value="*" onclick="multiply()">
+    <input type="button" name="action" value="/" onclick="divide()"><br><br>
+    <b>Result: </b><input type="text" name="result" size="5" readonly><br>
+  </form>
+</body>
+</html>
