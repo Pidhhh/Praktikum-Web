@@ -1,0 +1,15 @@
+CREATE DATABASE Informatics;
+
+USE Informatics;
+
+CREATE TABLE user (
+    Username VARCHAR(100) PRIMARY KEY,
+    Password VARCHAR(100),
+    Name VARCHAR(100),
+    Status VARCHAR(100)
+);
+
+INSERT INTO user (Username, Password, Name, Status) 
+VALUES 
+    ('admin', '1234', 'Admin', 'Administrator'),
+    ('adul', '1111', 'Adul Abdullah', 'Member');
