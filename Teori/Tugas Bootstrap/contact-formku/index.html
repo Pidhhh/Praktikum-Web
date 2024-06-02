@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Contact Form</title>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <form action="submit">
+        <h1>Contact Us</h1>
+
+        <div class="row two-col">
+          <label for="first-name"><span class="text"> First Name</span>
+            <input type="text" id="first-name" required>
+            <span class="errmsg" id="first-name-err">This field is required</span>
+          </label>
+          <label for="last-name"><span class="text">Last Name</span>
+            <input type="text" id="last-name" required>
+            <span class="errmsg" id="last-name-err">This field is required</span>
+          </label>
+        </div>
+
+        <label for="email"><span class="text">Email Address</span>
+          <input type="email" name="email" id="email" required>
+          <span class="errmsg" id="email-err">Please enter a valid email address</span>
+        </label>
+
+        <label for="type"><span class="text">Query Type</span>
+          <div class="row two-col">
+            <span class="box radio-container"><input type="radio" name="radio" id="general"><span class="customradio"></span><span class="radiotext">General Enquiry</span></span>
+            <span class="box radio-container"><input type="radio" name="radio" id="support"><span class="customradio"></span><span class="radiotext">Support Request</span></span>
+          </div>
+          <span class="errmsg" id="radioerr">Please select a query type</span>
+        </label>
+
+        <label for="message"><span class="text">Message</span>
+          <textarea name="message" id="message" required></textarea>
+          <span class="errmsg">This field is required</span>
+        </label>
+
+        <label for="check">
+          <div class="row">
+            <input type="checkbox" name="check" id="check"><span class="labelcheckbox"></span>
+            <span class="text">I consent to being contacted by the team</span>
+          </div>
+          <span class="errmsg" id="checkerr">To submit this form, please consent to being contacted</span>
+        </label>
+
+        <button type="submit">Submit</button>
+
+        <div class="success-msg">
+          <div class="row">
+            <img src="./assets/images/icon-success-check.svg" alt="">
+            <h2>Message Sent!</h2>
+          </div>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="./assets/script.js"></script>
+</body>
+</html>

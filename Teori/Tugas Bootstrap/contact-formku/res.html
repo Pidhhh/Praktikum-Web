@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Contact Form</title>
+    <style>
+      :root {
+        --clr-Light-Green: hsl(148, 38%, 91%);
+        --clr-Green: hsl(169, 82%, 27%);
+        --clr-Red: hsl(0, 66%, 56%);
+        --clr-White: hsl(0, 0%, 100%);
+        --clr-Medium-Grey: hsl(186, 15%, 59%);
+        --clr-Dark-Grey: hsl(187, 24%, 22%);
+        --fw-b: 700;
+      }
+
+      body {
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        background-color: var(--clr-Light-Green);
+        color: var(--clr-Dark-Grey);
+      }
+
+      .card {
+        border-radius: 12px;
+        padding: 40px;
+        background-color: var(--clr-White);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-label::after {
+        content: "*";
+        color: var(--clr-Green);
+        margin-left: 4px;
+      }
+
+      .is-invalid ~ .invalid-feedback {
+        display: block;
+      }
+
+      .is-valid {
+        border-color: var(--clr-Green);
+      }
+
+      #success-msg {
+        display: none;
+      }
+
+      button {
+        background-color: var(--clr-Green);
+        color: var(--clr-White);
+        font-weight: var(--fw-b);
+      }
+
+      .form-check-input:checked + .form-check-label::before {
+        background-color: var(--clr-Green);
+      }
+
+      .form-check-input {
+        cursor: pointer;
+      }
+
+      .form-check-label::before {
+        border: 1px solid var(--clr-Medium-Grey);
+      }
+
+      @media (max-width: 500px) {
+        body {
+          font-size: 13px;
+        }
+
+        main {
+          margin-top: 112px;
+        }
+
+        .card {
+          padding: 32px 16px;
+        }
+
+        button {
+          margin-block: 32px 64px;
+          height: 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card">
+        <form>
+          <h1 class="mb-4">Contact Us</h1>
+
+          <div class="form-row mb-3">
+            <div class="col">
+              <label for="first-name" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="first-name"
+                required
+              />
+              <div class="invalid-feedback">This field is required</div>
+            </div>
+            <div class="col">
+              <label for="last-name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="last-name" required />
+              <div class="invalid-feedback">This field is required</div>
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" required />
+            <div class="invalid-feedback">
+              Please enter a valid email address
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">Query Type</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="queryType"
+                id="general"
+              />
+              <label class="form-check-label" for="general"
+                >General Enquiry</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="queryType"
+                id="support"
+              />
+              <label class="form-check-label" for="support"
+                >Support Request</label
+              >
+            </div>
+            <div class="invalid-feedback d-block" id="radioerr">
+              Please select a query type
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="invalid-feedback">This field is required</div>
+          </div>
+
+          <div class="form-group form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="check" />
+            <label class="form-check-label" for="check"
+              >I consent to being contacted by the team</label
+            >
+            <div class="invalid-feedback d-block" id="checkerr">
+              To submit this form, please consent to being contacted
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-block">Submit</button>
+
+          <div class="alert alert-success mt-4" id="success-msg">
+            <div class="d-flex align-items-center">
+              <img
+                src="./assets/images/icon-success-check.svg"
+                alt=""
+                class="mr-2"
+              />
+              <h2 class="mb-0">Message Sent!</h2>
+            </div>
+            <p class="mt-2">
+              Thanks for completing the form. We'll be in touch soon!
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("button").click(function (event) {
+        let errors = 0;
+        $("form :input").each(function () {
+          if (!$(this).val() && $(this).prop("required")) {
+            $(this).addClass("is-invalid");
+            errors++;
+          } else {
+            $(this).removeClass("is-invalid").addClass("is-valid");
+          }
+        });
+
+        if ($('input[name="queryType"]:checked').length === 0) {
+          $("#radioerr").show();
+          errors++;
+        } else {
+          $("#radioerr").hide();
+        }
+
+        if ($("#check").prop("checked") === false) {
+          $("#checkerr").show();
+          errors++;
+        } else {
+          $("#checkerr").hide();
+        }
+
+        if (errors === 0) {
+          $("#success-msg").show();
+        } else {
+          $("#success-msg").hide();
+        }
+        event.preventDefault();
+      });
+
+      function showSuccess() {
+        $("#success-msg").show();
+      }
+
+      const radios = document.querySelectorAll('input[type="radio"]');
+      radios.forEach((radio) => {
+        radio.onclick = () => {
+          radios.forEach((radio) => {
+            radio.parentElement.style.backgroundColor = radio.checked
+              ? "var(--clr-Light-Green)"
+              : "var(--clr-White)";
+          });
+        };
+      });
+    </script>
+  </body>
+</html>

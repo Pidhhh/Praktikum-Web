@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+<title>Intro section with dropdown navigation</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+<script defer src="script.js"></script>
+<style>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font size to 10px for easier rem calculation */
+html {
+    font-size: 10px;
+}
+
+/* Initialize CSS Variables */
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+/* Body style */
+body {
+    font-family: "Epilogue", sans-serif; 
+    font-weight: 500;
+    font-size: 18px; 
+    line-height: 1.3;
+    color: var(--MediumGray);
+    background-color: var(--AlmostWhite);
+    overflow-x: hidden; /* Berfungsi untuk menghilangkan horizontal scrollbar */
+}
+
+/* Heading style */
+h1 {
+    font-size: 64px;
+    color: var(--AlmostAlmostBlack);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 26px;
+}
+
+/* Remove default list style */
+ul {
+    list-style: none;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+}
+
+/* Two column grid layout */
+.grid--2cols {
+    grid-template-columns: 1fr 1fr; /* berarti Membagi menjadi 2 colom yang sama*/ /* 1fr = 1 fraction */
+}
+
+/* Section style */
+.section {
+    max-width: 1400px;
+    padding: 20px;
+    margin: 38px auto 0 auto;
+    justify-items: center; /* berfungsi untuk mengatur posisi item agar di tengah */
+}
+
+/* Flex container style */
+.row {
+    display: flex;
+    flex-direction: row; /* berfungsi untuk mengatur agar menu di atas sejajar secara horizontal */
+    align-items: center; /* berfungsi untuk mengatur agar gambar panah di menu menjadi di tengah */
+}
+
+/* Button style */
+.tombol {
+    background-color: inherit;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 14px;
+    transition: all 100ms; /* berfungsi untuk mengatur transisi warna ketika dihover */
+}
+
+/* Text column style */
+.col-text {
+    max-width: 430px;
+    align-self: end; /* berfungsi untuk mengatur posisi coloumn kiri */
+}
+
+/* Paragraph style within text column */
+.col-text p {
+    margin-bottom: 26px;
+}
+
+/* Brand logos alignment */
+.brands {
+    justify-content: space-between;
+}
+
+/* "Learn more" button style */
+.tombol--learn {
+    padding: 15px 28px;
+    margin-bottom: 68px;
+    transition: all 150ms;
+    color: var(--AlmostWhite);
+    background-color: var(--AlmostBlack);
+    border: solid 1px var(--AlmostBlack);
+}
+
+.tombol--learn:hover {
+    color: var(--AlmostBlack);
+    background-color: var(--AlmostWhite);
+}
+
+/* Image column style */
+.col-img { /* berfungsi untuk mengatur posisi coloumn kanan */
+    max-width: 360px;
+}
+
+.hero-img { /* berfungsi untuk mengatur ukuran gambar sisi kanan*/
+    width: 100%;
+}
+
+/* Header style */
+.header {
+    padding: 22px 48px;
+    gap: 58px;
+    /* z-index: 999; */
+}
+
+/* Navigation style */
+.nav {
+    font-size: 15px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    gap: 36px; /* berfungsi untuk mengatur jarak antar menu */
+}
+
+.nav__list li {
+    cursor: pointer; /* berfungsi untuk mengubah cursor ketika diarahkan ke menu */
+}
+/* POPUP MENU */
+.menu--name {
+    align-self: start;
+    gap: 12px; /* berfungsi untuk mengatur jarak antar menu pada icon "^"*/
+}
+
+.menu {
+    gap: 6px; /* berfungsi untuk mengatur jarak pada mode mobile*/
+    position: relative; /* berfungsi untuk mengatur posisi sub-menu agar fleksibel saat diganti ukuran window*/
+    z-index: 999;
+}
+
+.hidden .popMenu {
+    visibility: hidden; /* berfungsi untuk menyembunyikan sub-menu */
+    pointer-events: none;
+}
+
+.popMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: max-content;
+    position: absolute;
+    top: 35px;
+    background-color: var(--AlmostWhite);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 34px -4px rgba(0, 0, 0, 0.17);
+}
+
+.popMenu li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features .popMenu {
+    right: 0px;
+}
+
+/* Side menu button style */
+.side-menu-tombol { /* berfungsi untuk mengatur posisi button menu pada mode mobile */
+    width: 70px;
+    height: 40px;
+    display: none;
+    z-index: 999;
+}
+
+/* Login and register button style */
+.tombol--login,
+.tombol--register {
+    color: var(--MediumGray);
+    margin-bottom: 2px;
+}
+
+.tombol--register {
+    border: solid 1px var(--MediumGray);
+}
+
+.tombol--login:hover,
+.tombol--register:hover,
+li:hover {
+    color: var(--AlmostBlack);
+    border-color: var(--AlmostBlack);
+    transition: all 150ms;
+}
+
+/* Media queries */
+/* berfungsi untuk mengatur tata letak pada mode mobile */
+@media (max-width: 900px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        line-height: 1.5;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    .section {
+        margin: 0;
+        padding: 0 0 80px 0;
+        gap: 34px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .header {
+        height: 98px;
+        padding: 22px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__list {
+        align-items: start;
+    }
+
+    .tombols--row {
+        align-self: center;
+        width: 100%;
+    }
+
+    .nav__list,
+    .tombols--row {
+        flex-direction: column;
+    }
+
+    .col-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tombol--register {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .col-img {
+        order: 1;
+        max-width: 480px;
+        max-height: 100%;
+    }
+
+    .brands img {
+        transform: scale(0.9);
+    }
+
+    .nav {
+        /* CLOSE BY DEFAULT */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 65%;
+        height: 100vh;
+        padding: 120px 36px 36px 36px;
+        box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        align-items: start;
+        justify-content: unset;
+        background-color: #fff;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: 1;
+        transition: all 0.3s ease-in;
+    }
+
+    .side-open .nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .menu {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popMenu {
+        gap: 16px;
+        position: initial;
+        background-color: #fff;
+        padding: 18px;
+        border-radius: 14px;
+        box-shadow: none;
+        gap: 16px;
+    }
+
+    .hidden .popMenu {
+        display: none;
+    }
+
+    .side-menu-tombol {
+        display: block;
+    }
+}
+
+</style>
+</head>
+<body>
+<header class="container-fluid">
+    <img src="images/logo.svg" alt="Logo">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav ml-auto">
+            <li class="hidden features row menu">
+                <div class="row menu--name" style="justify-content: flex-start;">
+                    Features
+                    <img src="images/icon-arrow-down.svg" data-srcup="images/icon-arrow-up.svg" data-srcdown="images/icon-arrow-down.svg" alt="Dropdown Arrow">
+                </div>
+                <ul class="popMenu">
+                    <li><img src="images/icon-todo.svg" alt="Todo Icon"> Todo List</li>
+                    <li><img src="images/icon-calendar.svg" alt="Calendar Icon"> Calendar</li>
+                    <li><img src="images/icon-reminders.svg" alt="Reminders Icon"> Reminders</li>
+                    <li><img src="images/icon-planning.svg" alt="Planning Icon"> Planning</li>
+                </ul>
+            </li>
+            <li class="hidden company row menu">
+                <div class="row menu--name">
+                    Company
+                    <img src="images/icon-arrow-down.svg" data-srcup="images/icon-arrow-up.svg" data-srcdown="images/icon-arrow-down.svg" alt="Dropdown Arrow">
+                </div>
+                <ul class="popMenu">
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Blog</li>
+                </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+        </ul>
+        <div class="tombols--row row">
+            <button class="tombol tombol--login">Login</button>
+            <button class="tombol tombol--register">Register</button>
+        </div>
+    </nav>
+    <button class="tombol side-menu-tombol" data-open="images/icon-menu.svg" data-close="images/icon-close-menu.svg">
+        <img src="images/icon-menu.svg" alt="Menu Icon">
+    </button>
+</header>
+<section class="section grid grid--2cols">
+    
+    <div class="col-img grid-col">
+        <picture>   
+            <source srcset="images/image-hero-desktop.png" media="(min-width: 47.5em)">
+            <img class="hero-img" srcset="images/image-hero-mobile.png" alt="Hero Image">
+        </picture>
+    </div>
+
+    <div class="col-text grid-col">
+        <h1 class="h1">Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button class="tombol tombol--learn">Learn more</button>
+        <div class="row brands">
+            <img src="images/client-databiz.svg" alt="Client Logo">
+            <img src="images/client-audiophile.svg" alt="Client Logo">
+            <img src="images/client-meet.svg" alt="Client Logo">
+            <img src="images/client-maker.svg" alt="Client Logo">
+        </div>
+    </div>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    
+<script>
+//memastikan agar kode program mengikuti peraturan ketat untuk menghindari error
+"use strict"; 
+
+//memeriksa elemen daftar navigasi utama dan tombol toggle menu samping
+const navList = document.querySelector(`.nav__list`);
+const sideMenutombol = document.querySelector(".side-menu-tombol");
+
+//memeriksa ukuran layar kecil sacara awal (kurang dari atau sama dengan 760px)
+let widthMatch = window.matchMedia("(max-width: 47.5em)");
+let closeTimer;
+
+// berfungsi untuk menyembunyikan menu dropdown
+const closePopMenu = function (menu) {
+  // menambahkan class "hidden" untuk menyembunyikan menu
+  menu.classList.add("hidden");
+  // mengubah sumber gambar untuk menunjukkan keadaan tertutup
+  menu.querySelector("img").src = menu.querySelector("img").dataset.srcdown;
+};
+
+// berfungsi untuk membuka menu dropdown
+const openPopMenu = function (menu) {
+  // menghapus timer yang ada yang mungkin menutup menu
+  clearInterval(closeTimer);
+  // Hapus class "hidden" untuk menampilkan menu
+  menu.classList.remove("hidden");
+  // mengubah sumber gambar untuk menunjukkan keadaan terbuka (ganti dengan logika aktual)
+  menu.querySelector("img").src =
+    menu.closest(".menu").querySelector("img").dataset.srcup;
+};
+
+// Fungsi untuk menangani event hover mouse (untuk layar besar)
+const mouseOverHandler = function (e) {
+  console.log("Mouse diarahkan ke item menu atau elemen anaknya"); // Untuk debugging
+
+  // Jika tidak melayang di atas menu atau popup-nya, keluar dari fungsi
+  if (!e.target.parentElement.classList.contains("menu") &&
+      !e.target.classList.contains("popMenu")) {
+    return;
+  }
+
+  // Temukan elemen menu terdekat yang diarahkan kursor
+  const currMenu = e.target.closest(".menu");
+  // Tutup semua menu terbuka lainnya
+  document.querySelectorAll(".menu").forEach((menu) => closePopMenu(menu));
+  // Buka menu yang diarahkan kursor dengan sedikit penundaan untuk menghindari penutupan yang tidak disengaja
+  openPopMenu(currMenu);
+};
+
+// Fungsi untuk menangani event mouse leave (untuk layar besar)
+const mouseLeaveHandler = function (e) {
+  // Setel timer untuk menutup menu setelah 1 detik mouse meninggalkan menu
+  closeTimer = setTimeout(function () {
+    // Tutup semua menu di dalam elemen yang ditinggalkan
+    e.target.querySelectorAll(".menu").forEach((menu) => closePopMenu(menu));
+  }, 1000);
+};
+
+// Fungsi untuk menangani event klik (untuk layar kecil)
+const clickHandler = function (e) {
+  console.log("Item menu diklik (untuk layar kecil)"); // Untuk debugging
+
+  // Jika tidak mengklik menu atau popup-nya, keluar dari fungsi
+  if (!e.target.parentElement.classList.contains("menu") &&
+      !e.target.classList.contains("popMenu")) {
+    return;
+  }
+
+  // Temukan elemen menu terdekat yang diklik
+  const currMenu = e.target.closest(".menu");
+
+  // Toggle class "hidden" untuk membuka atau menutup menu
+  currMenu.classList.toggle("hidden");
+};
+
+// Ganti event listener secara otomatis berdasarkan ukuran layar
+widthMatch.addEventListener("change", function (mm) {
+  if (mm.matches) { // Jika layar kecil
+    // Hapus listener hover/leave (tidak berlaku untuk layar kecil)
+    navList.removeEventListener("mouseover", mouseOverHandler);
+    navList.removeEventListener("mouseleave", mouseLeaveHandler);
+
+    // Tambahkan listener klik untuk interaksi menu
+    navList.addEventListener("click", clickHandler);
+  } else { // Jika layar besar
+    // Hapus listener klik (tidak berlaku untuk layar besar)
+    navList.removeEventListener("click", clickHandler);
+
+    // Tambahkan listener hover/leave untuk interaksi menu
+    navList.addEventListener("mouseover", mouseOverHandler);
+    navList.addEventListener("mouseleave", mouseLeaveHandler);
+  }
+});
+
+// Menunggu event klik pada tombol toggle menu samping
+sideMenutombol.addEventListener("click", function (e) {
+  // Mencari elemen `.header` terdekat dari tombol toggle
+  e.target.closest(".header").classList.toggle("side-open");
+  // Mendapatkan informasi posisi tombol toggle (opsional untuk debugging)
+  const rect = sideMenutombol.getBoundingClientRect();
+  console.log(rect.top, rect.right, rect.bottom, rect.left);
+  // Mengambil elemen img (gambar) di dalam tombol toggle
+  const imgtombol = sideMenutombol.querySelector("img");
+  // Mengubah gambar tombol toggle (terbuka <-> tertutup)
+  imgtombol.src =
+    imgtombol.src === sideMenutombol.dataset.open
+      ? sideMenutombol.dataset.close
+      : sideMenutombol.dataset.open;
+  // Menambahkan/menghapus class "fixed" (opsional untuk penyesuaian tampilan)
+  sideMenutombol.classList.toggle("fixed");
+});
+
+/* FIRST EVENT ASSIGNATION */
+if (window.innerWidth <= 760) {
+  //jika lebar layar kurang dari atau sama dengan 760px (perangkat seluler)
+  navList.addEventListener("click", clickHandler);
+} else {
+  navList.addEventListener("mouseover", mouseOverHandler);
+  navList.addEventListener("mouseleave", mouseLeaveHandler);
+}
+</script>
+</body>
+</html>
