@@ -1,0 +1,120 @@
+{
+"Nama": "Cesario Hafidh Arifa Noorcholish" ,
+"NIM": "L200224217" ,
+"Prodi": "Informatics Technology" ,
+"Semester": "4" ,
+"Alamat": "Teras, Boyolali",
+"Usia": "20" ,
+"Matakuliah Yang diambil": ["1. Praktikum Jaringan Komputer",
+"2. Pemrograman WEB", 
+"3. Jaringan Komputer", 
+"4. Rekayasa Perangkat Lunak", 
+"5. Organisasi dan Arsitektur Komputer", 
+"6. Praktikum Algoritma dan Struktur Data", 
+"7. Algoritma dan Struktur Data", 
+"8. Sistem Multimedia", 
+"9. Praktikum Pemrograman WEB", 
+"10. Kemuhammadiyahan" ],
+"Jadwal": [
+      {
+        "No": 1,
+        "hari": "senin",
+        "Jam": "3-4",
+        "Ruang": "LSITIF",
+        "kode matkul": "TIF3221133",
+        "Mata kuliah": "Praktikum Jaringan Komputer",
+        "Kelas": "X",
+        "Dosen Pengampu": "Ihsan Cahyo Utomo, M.Kom"
+      },
+      {
+        "No": 2,
+        "hari": "senin",
+        "Jam": "7-9",
+        "Ruang": "SW706",
+        "kode matkul": "TIF3221330",
+        "Mata kuliah": "Pemrograman WEB",
+        "Kelas": "X",
+        "Dosen Pengampu": "Gunawan Ariyanto, ST. M.Comp Sc., Ph.D"
+      },
+      {
+        "No": 3,
+        "hari": "selasa",
+        "Jam": "7-9",
+        "Ruang": "J.Int.1",
+        "kode matkul": "TIF3221332",
+        "Mata kuliah": "Jaringan Komputer",
+        "Kelas": "X",
+        "Dosen Pengampu": "Yudi Wahyu Wibowo, ST, M.Eng"
+      },
+      {
+        "No": 4,
+        "hari": "selasa",
+        "Jam": "10-12",
+        "Ruang": "SW706",
+        "kode matkul": "TIF3221334",
+        "Mata kuliah": "Rekayasa Perangkat Lunak",
+        "Kelas": "X",
+        "Dosen Pengampu": "Yusuf Sulistyo Nugroho, Dr. Eng."
+      },
+      {
+        "No": 5,
+        "hari": "rabu",
+        "Jam": "3-4",
+        "Ruang": "SW706",
+        "kode matkul": "TIF3221235",
+        "Mata kuliah": "Organisasi dan Arsitektur Komputer",
+        "Kelas": "X",
+        "Dosen Pengampu": "Helmi Imaduddin, S.Kom., M.Eng."
+      },
+      {
+        "No": 6,
+        "hari": "rabu",
+        "Jam": "5-6",
+        "Ruang": "LABRPL",
+        "kode matkul": "TIF3221129",
+        "Mata kuliah": "Praktikum Algoritma dan Struktur Data",
+        "Kelas": "X",
+        "Dosen Pengampu": "Endang Wahyu Pamungkas, SKom, MKom."
+      },
+      {
+        "No": 7,
+        "hari": "rabu",
+        "Jam": "7-9",
+        "Ruang": "SW706",
+        "kode matkul": "TIF3221328",
+        "Mata kuliah": "Algoritma dan Struktur Data",
+        "Kelas": "X",
+        "Dosen Pengampu": "Endang Wahyu Pamungkas, SKom, MKom."
+      },
+      {
+        "No": 8,
+        "hari": "kamis",
+        "Jam": "10-12",
+        "Ruang": "J.Int.1",
+        "kode matkul": "TIF3221353",
+        "Mata kuliah": "Sistem Multimedia",
+        "Kelas": "X",
+        "Dosen Pengampu": "Khanun Roisatul Ummah, S.Tr.T., M.Tr.Kom."
+      },
+      {
+        "No": 9,
+        "hari": "jumat",
+        "Jam": "7-8",
+        "Ruang": "LABRPL",
+        "kode matkul": "TIF3221131",
+        "Mata kuliah": "Praktikum Pemrograman WEB",
+        "Kelas": "X",
+        "Dosen Pengampu": "Gunawan Ariyanto, ST. M.Comp Sc., Ph.D"
+      },
+      {
+        "No": 10,
+        "hari": "senin",
+        "Jam": "1-2",
+        "Ruang": "J.Int.1",
+        "kode matkul": "TIF1221227",
+        "Mata kuliah": "Kemuhammadiyahan",
+        "Kelas": "X",
+        "Dosen Pengampu": "Endang Fauziati, Prof. Dr. M.Hum"
+      }
+    ]
+  }
