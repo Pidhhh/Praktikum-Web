@@ -33,3 +33,15 @@ Status: `Sudah Dikumpulkan`
 - Module 6 PHP-Based Web Application and MySQL Database (II) <br>
 Ini merupakan Folder [Modul 6](/Modul_6) <br>
 Status: `Sudah Dikumpulkan`
+
+- Module 7 CSS <br>
+Ini merupakan Folder [Modul 7](/Modul_7) <br>
+Status: `Sudah Dikumpulkan`
+
+- Module 8 JavaScript <br>
+Ini merupakan Folder [Modul 8](/Modul_8) <br>
+Status: `Sudah Dikumpulkan`
+
+- Module 9 Session <br>
+Ini merupakan Folder [Modul 9](/Modul_9) <br>
+Status: `Sudah Dikumpulkan`

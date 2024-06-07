@@ -1,0 +1,290 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-Light-Green: hsl(148, 38%, 91%);
+    --clr-Green: hsl(169, 82%, 27%);
+    --clr-Red: hsl(0, 66%, 56%);
+
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Medium-Grey: hsl(186, 15%, 59%);
+    --clr-Dark-Grey: hsl(187, 24%, 22%);
+
+    --fw-b: 700;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./fonts/Karla-VariableFont_wght.ttf');
+}
+
+body {
+    height: max(100vh, 1020px);
+    font-family: 'Karla';
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--clr-Light-Green);
+
+    color: var(--clr-Dark-Grey);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: min(740px, 95%);
+    height: min(775px, 95%);
+    padding: 40px;
+    background-color: var(--clr-White);
+    display: grid;
+    grid-template-rows: auto;
+    margin: 32px auto;
+    border-radius: 12.8px;
+}
+
+.errmsg {
+    color: var(--clr-Red);
+    display: none;
+}
+
+
+.row {
+    display: flex;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.success-msg {
+    background-color: var(--clr-Dark-Grey);
+    width: 73%;
+    padding: 24px;
+    margin: 0 auto;
+    border-radius: 9.6px;
+    position: absolute;
+    top: -144px;
+    left: 80px;
+    visibility: hidden;
+
+    h2 {
+        color: var(--clr-White);
+        font-size: 16px;
+        font-weight: var(--fw-b);
+        margin-left: 8px;
+    }
+
+    p {
+        color: var(--clr-Medium-Grey);
+        margin-top: 16px;
+    }
+}
+
+form {
+    display: grid;
+    position: relative;
+}
+
+.two-col {
+    width: 100%;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.two-col>* {
+    flex-grow: 1;
+}
+
+input,
+.box {
+    height: 48px;
+    border: 1px solid var(--clr-Medium-Grey);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.warning {
+    border: 1px solid var(--clr-Red);
+}
+
+.success {
+    border: 1px solid var(--clr-Medium-Grey);
+}
+
+input {
+    padding-left: 32px;
+}
+
+.box {
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.radiotext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 32px;
+    font-size: inherit;
+}
+
+label[for='check'] .row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+        margin-block: auto;
+    }
+
+    .text {
+        margin-left: -16px;
+    }
+}
+
+textarea {
+    height: 104px;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.text {
+    margin-bottom: 16px;
+}
+
+.text::after {
+    content: '*';
+    position: relative;
+    left: 16px;
+    top: 3.2px;
+    color: var(--clr-Green);
+}
+
+button {
+    border: none;
+    background-color: var(--clr-Green);
+    color: var(--clr-White);
+    font-weight: var(--fw-b);
+    line-height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1.6px;
+}
+
+/*  custom checkbox  */
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.labelcheckbox {
+    border: 1px solid #000;
+    display: inline-block;
+    width: 16px;
+    aspect-ratio: 1;
+    z-index: 10;
+    position: relative;
+    left: -30.4px;
+}
+
+input[type=checkbox]:checked+.labelcheckbox {
+    background: url("./images/icon-checkbox-check.svg") no-repeat center;
+
+}
+
+/*custom radio */
+
+
+input[type=radio] {
+    opacity: 0;
+    z-index: 20;
+}
+
+.customradio {
+    display: block;
+    height: 21px;
+    width: 20px;
+    border: 1px solid var(--clr-Medium-Grey);
+    border-radius: 50%;
+    z-index: 10;
+    position: absolute;
+    left: 28.8px;
+    top: 12.8px;
+}
+
+input[type=radio]:checked+.customradio {
+    background: url('./images/icon-radio-selected.svg') center;
+}
+
+@media (width < 500px) {
+    body {
+        font-size: 13px;
+    }
+
+    main {
+        margin-top: 112px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    label[for=check] .row {
+        flex-direction: row;
+    }
+
+    .card {
+        padding: 32px 16px;
+        height: auto;
+    }
+
+    button {
+        margin-block: 32px 64px;
+        height: 48px;
+    }
+
+    .text {
+        margin-top: 16px;
+    }
+
+    form {
+        margin-top: 80px;
+    }
+
+    .success-msg {
+        position: absolute;
+        left: 32px;
+        top: auto;
+        bottom: 20%;
+
+        .row {
+            flex-direction: row;
+        }
+    }
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    right: 5%;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
