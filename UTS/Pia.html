@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Pasien Rawat Inap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formulir Pasien Rawat Inap</h1>
+    <form>
+      <!-- IDENTITAS PASIEN -->
+      <div class="form-group">
+        <label for="nama">Nama lengkap:*</label>
+        <div class="name-group">
+          <input type="text" id="nama_depan" name="nama_depan" placeholder="Nama Depan">
+          <input type="text" id="nama_belakang" name="nama_belakang" placeholder="Nama Belakang">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nama_ibu">Nama Ibu Kandung:*</label>
+        <input type="text" id="nama_ibu" name="nama_ibu">
+      </div>
+      <div class="form-group">
+        <label for="tempat">Tempat Lahir:*</label>
+        <input type="text" id="tempat" name="tempat">
+      </div>
+      <div class="form-group">
+        <label for="tanggal">Tanggal Lahir:*</label>
+        <input type="date" id="tanggal" name="tanggal">
+      </div>
+      <div class="form-group">
+        <label>Jenis Kelamin:*</label>
+        <div class="radio-group">
+          <input type="radio" id="jk_laki" name="jk" value="Laki-Laki">
+          <label for="jk_laki">Laki-Laki</label>
+          <input type="radio" id="jk_perempuan" name="jk" value="Perempuan">
+          <label for="jk_perempuan">Perempuan</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat Rumah:*</label>
+        <textarea id="alamat" name="alamat"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="nomor">No. Telepon:*</label>
+        <input type="text" id="nomor" name="nomor">
+      </div>
+      <div class="form-group">
+        <label for="pekerjaan">Pekerjaan:</label>
+        <input type="text" id="pekerjaan" name="pekerjaan">
+      </div>
+
+      <!-- IDENTITAS PENANGGUNG JAWAB -->
+      <h2>IDENTITAS PENANGGUNG JAWAB</h2>
+      <div class="form-group">
+        <label for="nama_penanggung">Nama lengkap:*</label>
+        <div class="name-group">
+          <input type="text" id="nama_penanggung_depan" name="nama_penanggung_depan" placeholder="Nama Depan">
+          <input type="text" id="nama_penanggung_belakang" name="nama_penanggung_belakang" placeholder="Nama Belakang">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nama_ibu_penanggung">Nama Ibu Kandung:*</label>
+        <input type="text" id="nama_ibu_penanggung" name="nama_ibu_penanggung">
+      </div>
+      <div class="form-group">
+        <label for="tempat_penanggung">Tempat Lahir:*</label>
+        <input type="text" id="tempat_penanggung" name="tempat_penanggung">
+      </div>
+      <div class="form-group">
+        <label for="tanggal_penanggung">Tanggal Lahir:*</label>
+        <input type="date" id="tanggal_penanggung" name="tanggal_penanggung">
+      </div>
+      <div class="form-group">
+        <label>Jenis Kelamin:*</label>
+        <div class="radio-group">
+          <input type="radio" id="jk_penanggung_laki" name="jk_penanggung" value="Laki-Laki">
+          <label for="jk_penanggung_laki">Laki-Laki</label>
+          <input type="radio" id="jk_penanggung_perempuan" name="jk_penanggung" value="Perempuan">
+          <label for="jk_penanggung_perempuan">Perempuan</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="alamat_penanggung">Alamat Rumah:*</label>
+        <textarea id="alamat_penanggung" name="alamat_penanggung"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="nomor_penanggung">No. Telepon:*</label>
+        <input type="text" id="nomor_penanggung" name="nomor_penanggung">
+      </div>
+      <div class="form-group">
+        <label for="pekerjaan_penanggung">Pekerjaan:</label>
+        <input type="text" id="pekerjaan_penanggung" name="pekerjaan_penanggung">
+      </div>
+      <div class="form-group">
+        <label for="hubungan">Hubungan Dengan Pasien Sebagai:</label>
+        <input type="text" id="hubungan" name="hubungan">
+      </div>
+
+      <!-- KELAS PERAWATAN YANG DIMINTA -->
+      <h2>KELAS PERAWATAN YANG DIMINTA</h2>
+      <div class="form-group">
+        <label for="kelas_bpjs">Kelas Perawatan (BPJS):</label>
+        <select id="kelas_bpjs" name="kelas_bpjs">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="kamar">Kamar:</label>
+        <select id="kamar" name="kamar">
+          <option value="vvipp">VVIPP</option>
+          <option value="vip">VIP</option>
+          <option value="kelas1">Kamar Kelas 1</option>
+          <option value="kelas2">Kamar Kelas 2</option>
+          <option value="kelas3">Kamar Kelas 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tanggal_masuk">Tanggal Masuk:</label>
+        <input type="date" id="tanggal_masuk" name="tanggal_masuk">
+      </div>
+      <div class="form-group">
+        <label>Asal Pasien (pilih satu):</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="asal_igd" name="asal" value="igd">
+          <label for="asal_igd">IGD</label>
+          <input type="checkbox" id="asal_klinik" name="asal" value="klinik">
+          <label for="asal_klinik">Klinik</label>
+          <input type="checkbox" id="asal_rujukan" name="asal" value="rujukan">
+          <label for="asal_rujukan">Rujukan</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Biaya Pasien:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="biaya_pribadi" name="biaya" value="pribadi">
+          <label for="biaya_pribadi">Pribadi</label>
+          <input type="checkbox" id="biaya_asuransi" name="biaya" value="asuransi">
+          <label for="biaya_asuransi">Perusahaan/Asuransi</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="kode_asuransi">Kode Perusahaan/Asuransi:</label>
+        <input type="text" id="kode_asuransi" name="kode_asuransi">
+      </div>
+      <div class="form-group">
+        <label>Surat Jaminan:</label>
+        <div class="radio-group">
+          <input type="radio" id="jaminan_ya" name="jaminan" value="ya">
+          <label for="jaminan_ya">YA</label>
+          <input type="radio" id="jaminan_tidak" name="jaminan" value="tidak">
+          <label for="jaminan_tidak">TIDAK</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Daftar">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
