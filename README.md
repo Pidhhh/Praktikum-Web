@@ -45,3 +45,11 @@ Status: `Sudah Dikumpulkan`
 - Module 9 Session <br>
 Ini merupakan Folder [Modul 9](/Modul_9) <br>
 Status: `Sudah Dikumpulkan`
+
+- Module 10 JSON <br>
+Ini merupakan Folder [Modul 10](/Modul_10) <br>
+Status: `Sudah Dikumpulkan`
+
+- Module 11 Web Hosting <br>
+Ini merupakan Folder [Modul 11](/Modul_11) <br>
+Status: `Sudah Dikumpulkan`
